@@ -24,7 +24,7 @@ struct LoginView: View {
                         .foregroundColor(.gray)
                     TextField("Username", text: $username)
                 }
-                .padding(.vertical, 9)
+                .padding(.vertical, 10)
                 .overlay(Rectangle().frame(height: 1).padding(.top, 35), alignment: .bottom)
                 .padding(.horizontal, 50)
                             
@@ -33,7 +33,7 @@ struct LoginView: View {
                         .foregroundColor(.gray)
                     SecureField("Password", text: $password)
                 }
-                .padding(.vertical, 9)
+                .padding(.vertical, 10)
                 .overlay(Rectangle().frame(height: 1).padding(.top, 35), alignment: .bottom)
                 .padding(.horizontal, 50)
                 
