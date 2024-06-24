@@ -56,7 +56,7 @@ struct LoginView: View {
                     .overlay(Rectangle().frame(height: 1).padding(.top, 35), alignment: .bottom)
                     .padding(.horizontal, 50)
                     
-                    NavigationLink(destination: CreateAccountView()){
+                    NavigationLink(destination: HomeView()){
                         Text("Login")
                             .font(.headline)
                             .foregroundColor(.white)
@@ -67,12 +67,18 @@ struct LoginView: View {
                             .padding(.top, 35)
                             .padding(.bottom, 10)
                     }
-                    NavigationLink(destination: CreateAccountView()){
-                        Text("Don't have an account? Register now")
+                    
+                    HStack{
+                        Text("Don't have an account?")
                             .foregroundColor(Color("CustomBrown"))
-                            .multilineTextAlignment(.center)
-                            .padding(.bottom, 100)
+                        
+                        NavigationLink(destination: CreateAccountView()){
+                            Text("Register now")
+                                .foregroundColor(Color("CustomGreen"))
+                        }
                     }
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom, 100)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .edgesIgnoringSafeArea(.all)
