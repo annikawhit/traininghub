@@ -25,8 +25,8 @@ struct CreateAccountView: View {
                         
                         TextField("First Name", text: $fname)
                             .padding()
-                            .background(Color.white)
-                            .foregroundColor(Color.white)
+                            .background(Color("CustomBackground"))
+                            .foregroundColor(Color.black)
                             .cornerRadius(5)
                             .padding(EdgeInsets(top: 0, leading: 40, bottom: 15, trailing: 40))
                         
@@ -36,8 +36,8 @@ struct CreateAccountView: View {
                         
                         TextField("Last Name", text: $lname)
                             .padding()
-                            .background(Color.white)
-                            .foregroundColor(Color.white)
+                            .background(Color("CustomBackground"))
+                            .foregroundColor(Color.black)
                             .cornerRadius(5)
                             .padding(EdgeInsets(top: 0, leading: 40, bottom: 15, trailing: 40))
                         
@@ -47,8 +47,8 @@ struct CreateAccountView: View {
                         
                         TextField("Email", text: $email)
                             .padding()
-                            .background(Color.white)
-                            .foregroundColor(Color.white)
+                            .background(Color("CustomBackground"))
+                            .foregroundColor(Color.black)
                             .cornerRadius(5)
                             .padding(EdgeInsets(top: 0, leading: 40, bottom: 15, trailing: 40))
                         
@@ -58,8 +58,8 @@ struct CreateAccountView: View {
                         
                         TextField("Password", text: $password)
                             .padding()
-                            .background(Color.white)
-                            .foregroundColor(Color.white)
+                            .background(Color("CustomBackground"))
+                            .foregroundColor(Color.black)
                             .cornerRadius(5)
                             .padding(EdgeInsets(top: 0, leading: 40, bottom: 15, trailing: 40))
                         
@@ -69,8 +69,8 @@ struct CreateAccountView: View {
                         
                         TextField("Confirm Password", text: $cpassword)
                             .padding()
-                            .background(Color.white)
-                            .foregroundColor(Color.white)
+                            .background(Color("CustomBackground"))
+                            .foregroundColor(Color.black)
                             .cornerRadius(5)
                             .padding(EdgeInsets(top: 0, leading: 40, bottom: 30, trailing: 40))
                     }

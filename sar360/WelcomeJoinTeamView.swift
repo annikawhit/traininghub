@@ -30,7 +30,7 @@ struct WelcomeJoinTeamView: View {
                         .padding(.bottom, 50)
                         .padding(.top, 30)
                     
-                    Text("Join a Team or Create a Team Now!")
+                    Text("Join a Team Now!")
                         .font(.system(size: 25))
                         .fontWeight(.bold)
                         .foregroundColor(Color("CustomBackground"))
@@ -56,11 +56,11 @@ struct WelcomeJoinTeamView: View {
                     }
                     
                     HStack{
-                        Text("Don't have an team?")
+                        Text("Don't have a team?")
                             .foregroundColor(Color("CustomBrown"))
                         
                         NavigationLink(destination: CreateAccountView()){
-                            Text("Create one now")
+                            Text("Create a team now")
                                 .foregroundColor(Color("CustomGreen"))
                         }
                     }

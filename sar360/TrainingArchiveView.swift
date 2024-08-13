@@ -16,58 +16,54 @@ struct TrainingArchiveView: View {
     private let itemsPerPage = 10
 
     var body: some View {
-        VStack {
-            Text("Training Archive")
-            .font(.largeTitle)
-            .foregroundColor(Color("CustomGreen"))
-            .multilineTextAlignment(.leading)
-            .bold()
-            .padding(.top, 10)
-            .padding(.trailing, 90)
-            
-            HStack{
-                Text("Select Team:")
-                .font(.title)
+        NavigationView {
+            VStack {
+                Text("Training Archive")
+                .font(.largeTitle)
                 .foregroundColor(Color("CustomGreen"))
                 .multilineTextAlignment(.leading)
                 .bold()
-                .padding(.top, 10)
-                .padding(.leading, 10)
-                .padding(.trailing, 10)
+                .padding(.top, 25)
+                .padding(.trailing, 90)
                 
-                Menu(content: {
-                    Picker("fruits", selection: $selectedFruit) {
-                        ForEach(fruits, id: \.self) { fruit in
-                            Text(fruit)
+                HStack{
+                    Text("Select Team:")
+                    .font(.system(size: 20))
+                    .foregroundColor(Color("CustomGreen"))
+                    .multilineTextAlignment(.leading)
+                    .bold()
+                    .padding(.top, 10)
+                    
+                    Menu(content: {
+                        Picker("fruits", selection: $selectedFruit) {
+                            ForEach(fruits, id: \.self) { fruit in
+                                Text(fruit)
+                            }
                         }
-                    }
-                }, label: {
-                    (Text("\(selectedFruit) ") + Text(Image(systemName: "chevron.down")))
-                })
-                .padding(.all, 15)
-                .foregroundStyle(Color.white)
-                .background(RoundedRectangle(cornerRadius: 16).fill(Color("CustomGreen")))
-            }
-            
-            Spacer()
-            
-            NavigationView {
+                    }, label: {
+                        (Text("\(selectedFruit) ") + Text(Image(systemName: "chevron.down")))
+                    })
+                    .padding(.all, 15)
+                    .foregroundStyle(Color.white)
+                    .background(RoundedRectangle(cornerRadius: 16).fill(Color("CustomGreen")))
+                }
+                
                 ZStack{
-                    Color("CustonBackground").edgesIgnoringSafeArea(.all)
                     VStack {
                         List(currentItems, id: \.self) { item in
-                            Text(item)
+                                NavigationLink(destination: RecordTrainingView()){
+                                    Text(item)
+                                }
                         }
-                        .background(Color.blue.edgesIgnoringSafeArea(.all))
-                        
+                            
                         HStack {
                             Button(action: previousPage) {
                                 Text("Previous")
                             }
                             .disabled(currentIndex == 0)
-                            
+                                
                             Spacer()
-                            
+                                
                             Button(action: nextPage) {
                                 Text("Next")
                             }
@@ -77,10 +73,9 @@ struct TrainingArchiveView: View {
                     }
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color("CustomBackground"))
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color("CustomBackground"))
-        
     }
     
 
