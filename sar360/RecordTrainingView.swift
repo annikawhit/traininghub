@@ -12,13 +12,14 @@ struct RecordTrainingView: View {
     @State private  var selectedFruit: String = "banana"
     @State private var selectedDate = Date()
     @State private var team: String = ""
+    @State private var name: String = ""
     @State private var type: String = ""
     @State private var date: String = ""
     @State private var location: String = ""
     @State private var participants: String = ""
     
-    let allItems = Array(1...10).map { "Item \($0)" }
-    @State private var currentIndex = 0
+    @State private var currentItems: [String] = ["Item 1", "Item 2", "Item 3"] // Initial items
+    @State private var newItem: String = "" // New item text
     
     var body: some View {
             ScrollView{
@@ -36,7 +37,7 @@ struct RecordTrainingView: View {
                             Text("Team:")
                             .foregroundColor(Color.black)
                             .padding(.top, 10)
-                            .padding(.leading, 45)
+                            .padding(.leading, 25)
                             
                             Spacer()
                             
@@ -50,18 +51,35 @@ struct RecordTrainingView: View {
                                 (Text("\(selectedFruit) ") + Text(Image(systemName: "chevron.down")))
                             })
                             .padding(.all, 15)
+                            .frame(width: 230)
                             .foregroundStyle(Color.black)
                             .background(RoundedRectangle(cornerRadius: 16).fill(Color("CustomBackground")))
                         }
-                        .padding(.trailing, 85)
                         .padding(.top, 20)
+                        .padding(.trailing, 20)
+                        
+                        HStack{
+                            Text("Name:")
+                            .foregroundColor(Color.black)
+                            .padding(.top, 10)
+                            .padding(.leading, 25)
+                            
+                            Spacer()
+                            
+                            TextField("Name", text: $name)
+                                .padding()
+                                .foregroundColor(Color.black)
+                                .background(RoundedRectangle(cornerRadius: 16).fill(Color("CustomBackground")))
+                                .frame(width: 230)
+                        }
+                        .padding(.trailing, 20)
                         
                         HStack{
                             Text("Type:")
                             .foregroundColor(Color.black)
                             .multilineTextAlignment(.leading)
                             .padding(.top, 10)
-                            .padding(.leading, 45)
+                            .padding(.leading, 25)
                             
                             Spacer()
                             
@@ -75,17 +93,19 @@ struct RecordTrainingView: View {
                                 (Text("\(selectedFruit) ") + Text(Image(systemName: "chevron.down")))
                             })
                             .padding(.all, 15)
+                            .frame(width: 230)
                             .foregroundStyle(Color.black)
                             .background(RoundedRectangle(cornerRadius: 16).fill(Color("CustomBackground")))
+                            
                         }
-                        .padding(.trailing, 85)
+                        .padding(.trailing, 20)
                         
                         HStack{
                             Text("Date:")
                                 .foregroundColor(Color.black)
                                 .multilineTextAlignment(.leading)
                                 .padding(.top, 10)
-                                .padding(.leading, 45)
+                                .padding(.leading, 25)
                             
                             Spacer()
                         }
@@ -110,7 +130,7 @@ struct RecordTrainingView: View {
                             .foregroundColor(Color.black)
                             .multilineTextAlignment(.leading)
                             .padding(.top, 10)
-                            .padding(.leading, 45)
+                            .padding(.leading, 25)
                             
                             Spacer()
                             
@@ -124,19 +144,23 @@ struct RecordTrainingView: View {
                                 (Text("\(selectedFruit) ") + Text(Image(systemName: "chevron.down")))
                             })
                             .padding(.all, 15)
+                            .frame(width: 230)
                             .foregroundStyle(Color.black)
                             .background(RoundedRectangle(cornerRadius: 16).fill(Color("CustomBackground")))
                         }
-                        .padding(.trailing, 85)
+                        .padding(.trailing, 20)
                         
                         HStack{
                             Text("Participants:")
                                 .foregroundColor(Color.black)
                                 .multilineTextAlignment(.leading)
-                                .padding(.leading, 45)
+                                .padding(.leading, 25)
                             Spacer()
-                            Button("Add"){
-                                
+                            
+                            Button(action: {
+                                addItem()
+                            }){
+                                Text("Add")
                             }
                             .font(.headline)
                             .foregroundColor(.white)
@@ -146,13 +170,17 @@ struct RecordTrainingView: View {
                             .shadow(radius: 5)
                             .padding(.top, 10)
                             .padding(.bottom, 10)
-                            .padding(.trailing, 50)
+                            .padding(.trailing, 20)
                         }
+                        
                         List(currentItems, id: \.self) { item in
-                                NavigationLink(destination: RecordTrainingView()){
-                                    Text(item)
-                                }
+                            Text(item)
                         }
+                        .padding(.top, 25)
+                        .padding(.bottom, 25)
+                        .padding(.leading, 25)
+                        .background(Color.white)
+                        
                         
                     }
                     .background(Color("CustomBrown"))
@@ -182,9 +210,11 @@ struct RecordTrainingView: View {
             return formatter
     }
     
-    private var currentItems: [String] {
-            let endIndex = min(currentIndex, allItems.count)
-            return Array(allItems[currentIndex..<endIndex])
+    private func addItem() {
+        if !newItem.isEmpty {
+            currentItems.append(newItem)
+            newItem = "" // Clear the text field after adding
+        }
     }
 }
 
