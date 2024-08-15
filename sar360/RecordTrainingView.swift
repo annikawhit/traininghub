@@ -18,7 +18,7 @@ struct RecordTrainingView: View {
     @State private var location: String = ""
     @State private var participants: String = ""
     
-    @State private var currentItems: [String] = ["Item 1", "Item 2", "Item 3"] // Initial items
+    let items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]
     @State private var newItem: String = "" // New item text
     
     var body: some View {
@@ -173,14 +173,9 @@ struct RecordTrainingView: View {
                             .padding(.trailing, 20)
                         }
                         
-                        List(currentItems, id: \.self) { item in
-                            Text(item)
+                        List(items, id: \.self) { item in
+                                Text(item)
                         }
-                        .padding(.top, 25)
-                        .padding(.bottom, 25)
-                        .padding(.leading, 25)
-                        .background(Color.white)
-                        
                         
                     }
                     .background(Color("CustomBrown"))
@@ -209,12 +204,10 @@ struct RecordTrainingView: View {
             formatter.dateStyle = .long
             return formatter
     }
-    
     private func addItem() {
-        if !newItem.isEmpty {
-            currentItems.append(newItem)
-            newItem = "" // Clear the text field after adding
-        }
+            if !newItem.isEmpty {
+                newItem = "" // Clear the text field after adding
+            }
     }
 }
 

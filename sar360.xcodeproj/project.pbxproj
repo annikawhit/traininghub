@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3108C55B2C6DA9640066B1EB /* TeamDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108C55A2C6DA9640066B1EB /* TeamDataView.swift */; };
 		314A3E422C2721900066BEFC /* sar360App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E412C2721900066BEFC /* sar360App.swift */; };
 		314A3E442C2721900066BEFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E432C2721900066BEFC /* ContentView.swift */; };
 		314A3E462C2721910066BEFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 314A3E452C2721910066BEFC /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3108C55A2C6DA9640066B1EB /* TeamDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataView.swift; sourceTree = "<group>"; };
 		314A3E3E2C2721900066BEFC /* sar360.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sar360.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		314A3E412C2721900066BEFC /* sar360App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sar360App.swift; sourceTree = "<group>"; };
 		314A3E432C2721900066BEFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				314A3E712C2BA97A0066BEFC /* WelcomeJoinTeamView.swift */,
 				314A3E6F2C2737870066BEFC /* HomeView.swift */,
 				314A3E772C2D09C20066BEFC /* SettingsView.swift */,
+				3108C55A2C6DA9640066B1EB /* TeamDataView.swift */,
 				314A3E732C2D02E30066BEFC /* TrainingArchiveView.swift */,
 				314A3E752C2D02F30066BEFC /* RecordTrainingView.swift */,
 				314A3E6D2C2734AA0066BEFC /* CreateAccountView.swift */,
@@ -281,6 +284,7 @@
 				314A3E6C2C2734890066BEFC /* LoginView.swift in Sources */,
 				314A3E762C2D02F30066BEFC /* RecordTrainingView.swift in Sources */,
 				314A3E442C2721900066BEFC /* ContentView.swift in Sources */,
+				3108C55B2C6DA9640066B1EB /* TeamDataView.swift in Sources */,
 				314A3E782C2D09C20066BEFC /* SettingsView.swift in Sources */,
 				314A3E6E2C2734AA0066BEFC /* CreateAccountView.swift in Sources */,
 				314A3E702C2737870066BEFC /* HomeView.swift in Sources */,

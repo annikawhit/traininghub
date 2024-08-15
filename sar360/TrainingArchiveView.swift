@@ -16,7 +16,6 @@ struct TrainingArchiveView: View {
     private let itemsPerPage = 10
 
     var body: some View {
-        NavigationView {
             VStack {
                 Text("Training Archive")
                 .font(.largeTitle)
@@ -75,7 +74,7 @@ struct TrainingArchiveView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color("CustomBackground"))
-        }
+        
     }
     
 
