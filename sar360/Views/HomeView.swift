@@ -9,8 +9,29 @@
 import SwiftUI
 
 struct HomeView: View {
+    // @StateObject var viewModel = HomeViewModel()
+    
     var body: some View {
-        VStack{
+        
+        /*if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty{
+            
+            
+        } else{
+            LoginView()
+        }*/
+        
+        TabView{
+            TrainingArchiveView()
+                .tabItem{
+                    Label("Home", systemImage: "house")
+                }
+            ProfileView()
+                .tabItem{
+                    Label("Profile", systemImage: "person.circle")
+                }
+        }
+        
+        /*VStack{
             
             HStack{
                 Text("name")
@@ -63,7 +84,7 @@ struct HomeView: View {
                 .padding(.top, 200)
             }
         }
-        .background(Color("CustomBackground"))
+        .background(Color("CustomBackground"))*/
     }
 }
 

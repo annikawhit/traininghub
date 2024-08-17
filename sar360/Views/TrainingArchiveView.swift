@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TrainingArchiveView: View {
+    @StateObject var viewModel = TrainingArchiveViewModel()
+    
     var fruits = ["apple", "banana", "orange", "kiwi"]
     @State private  var selectedFruit: String = "banana"
     
@@ -16,14 +18,8 @@ struct TrainingArchiveView: View {
     private let itemsPerPage = 10
 
     var body: some View {
+        NavigationView{
             VStack {
-                Text("Training Archive")
-                .font(.largeTitle)
-                .foregroundColor(Color("CustomGreen"))
-                .multilineTextAlignment(.leading)
-                .bold()
-                .padding(.top, 25)
-                .padding(.trailing, 90)
                 
                 HStack{
                     Text("Select Team:")
@@ -74,6 +70,15 @@ struct TrainingArchiveView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color("CustomBackground"))
+            .navigationTitle("Training Archive")
+            .toolbar{
+                Button {
+                    //Action
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
+        }
         
     }
     
