@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3108C55B2C6DA9640066B1EB /* TeamDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108C55A2C6DA9640066B1EB /* TeamDataView.swift */; };
 		3108C55D2C6ED3110066B1EB /* ChangeUserDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108C55C2C6ED3110066B1EB /* ChangeUserDataView.swift */; };
+		3108C55F2C703A2C0066B1EB /* CreateTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108C55E2C703A2C0066B1EB /* CreateTeamView.swift */; };
 		314A3E422C2721900066BEFC /* sar360App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E412C2721900066BEFC /* sar360App.swift */; };
 		314A3E442C2721900066BEFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E432C2721900066BEFC /* ContentView.swift */; };
 		314A3E462C2721910066BEFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 314A3E452C2721910066BEFC /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		3108C55A2C6DA9640066B1EB /* TeamDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataView.swift; sourceTree = "<group>"; };
 		3108C55C2C6ED3110066B1EB /* ChangeUserDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataView.swift; sourceTree = "<group>"; };
+		3108C55E2C703A2C0066B1EB /* CreateTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamView.swift; sourceTree = "<group>"; };
 		314A3E3E2C2721900066BEFC /* sar360.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sar360.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		314A3E412C2721900066BEFC /* sar360App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sar360App.swift; sourceTree = "<group>"; };
 		314A3E432C2721900066BEFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				314A3E732C2D02E30066BEFC /* TrainingArchiveView.swift */,
 				314A3E752C2D02F30066BEFC /* RecordTrainingView.swift */,
 				314A3E6D2C2734AA0066BEFC /* CreateAccountView.swift */,
+				3108C55E2C703A2C0066B1EB /* CreateTeamView.swift */,
 				314A3E452C2721910066BEFC /* Assets.xcassets */,
 				314A3E472C2721910066BEFC /* Preview Content */,
 			);
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				314A3E6C2C2734890066BEFC /* LoginView.swift in Sources */,
+				3108C55F2C703A2C0066B1EB /* CreateTeamView.swift in Sources */,
 				314A3E762C2D02F30066BEFC /* RecordTrainingView.swift in Sources */,
 				314A3E442C2721900066BEFC /* ContentView.swift in Sources */,
 				3108C55B2C6DA9640066B1EB /* TeamDataView.swift in Sources */,

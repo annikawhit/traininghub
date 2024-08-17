@@ -64,7 +64,7 @@ struct ChangeUserDataView: View {
                 .cornerRadius(30)
                 .padding(EdgeInsets(top: 15, leading: 20, bottom: 15, trailing: 20))
                 
-                NavigationLink(destination: WelcomeJoinTeamView()){
+                NavigationLink(destination: SettingsView()){
                     Text("Save")
                         .font(.headline)
                         .foregroundColor(.white)
