@@ -8,5 +8,7 @@
 import Foundation
 
 class TrainingArchiveViewModel: ObservableObject {
+    @Published var showingRecordTrainingViewModel = false
+    
     init() {}
 }

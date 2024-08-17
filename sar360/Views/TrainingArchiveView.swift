@@ -10,6 +10,12 @@ import SwiftUI
 struct TrainingArchiveView: View {
     @StateObject var viewModel = TrainingArchiveViewModel()
     
+    /*private let userId: String
+    
+    init(userId: String){
+        self.userId = userId
+    }*/
+    
     var fruits = ["apple", "banana", "orange", "kiwi"]
     @State private  var selectedFruit: String = "banana"
     
@@ -73,10 +79,13 @@ struct TrainingArchiveView: View {
             .navigationTitle("Training Archive")
             .toolbar{
                 Button {
-                    //Action
+                    viewModel.showingRecordTrainingViewModel = true
                 } label: {
                     Image(systemName: "plus")
                 }
+            }
+            .sheet(isPresented: $viewModel.showingRecordTrainingViewModel){
+                RecordTrainingView()
             }
         }
         
