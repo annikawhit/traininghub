@@ -23,6 +23,21 @@ class RecordTrainingViewModel: ObservableObject {
     init() {}
     
     func save(){
+        guard canSave else{
+            return
+        }
         
+        //create model
+        
+        //save model
+    }
+    
+    var canSave: Bool{
+        //add guards to check data
+        /* ex:
+         guard !title.trimmingCharacters(in: .whitespaces).isEmpty else{
+            return false
+         }*/
+        return true
     }
 }

@@ -20,6 +20,7 @@
 		3108C5742C705BCF0066B1EB /* TrainingArchiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108C5732C705BCF0066B1EB /* TrainingArchiveViewModel.swift */; };
 		3108C5762C705C060066B1EB /* RecordTrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108C5752C705C060066B1EB /* RecordTrainingViewModel.swift */; };
 		3108C5782C705C3E0066B1EB /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108C5772C705C3E0066B1EB /* ProfileViewModel.swift */; };
+		3108C57A2C727B010066B1EB /* ChangeUserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108C5792C727B010066B1EB /* ChangeUserDataViewModel.swift */; };
 		314A3E422C2721900066BEFC /* sar360App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E412C2721900066BEFC /* sar360App.swift */; };
 		314A3E442C2721900066BEFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E432C2721900066BEFC /* ContentView.swift */; };
 		314A3E462C2721910066BEFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 314A3E452C2721910066BEFC /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		3108C5732C705BCF0066B1EB /* TrainingArchiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingArchiveViewModel.swift; sourceTree = "<group>"; };
 		3108C5752C705C060066B1EB /* RecordTrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTrainingViewModel.swift; sourceTree = "<group>"; };
 		3108C5772C705C3E0066B1EB /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		3108C5792C727B010066B1EB /* ChangeUserDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataViewModel.swift; sourceTree = "<group>"; };
 		314A3E3E2C2721900066BEFC /* sar360.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sar360.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		314A3E412C2721900066BEFC /* sar360App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sar360App.swift; sourceTree = "<group>"; };
 		314A3E432C2721900066BEFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				3108C56F2C7056B60066B1EB /* HomeViewModel.swift */,
 				3108C5732C705BCF0066B1EB /* TrainingArchiveViewModel.swift */,
 				3108C5752C705C060066B1EB /* RecordTrainingViewModel.swift */,
+				3108C5792C727B010066B1EB /* ChangeUserDataViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				3108C5682C70534F0066B1EB /* Team.swift in Sources */,
 				3108C55F2C703A2C0066B1EB /* CreateTeamView.swift in Sources */,
 				3108C56C2C7053B20066B1EB /* LoginViewModel.swift in Sources */,
+				3108C57A2C727B010066B1EB /* ChangeUserDataViewModel.swift in Sources */,
 				314A3E762C2D02F30066BEFC /* RecordTrainingView.swift in Sources */,
 				314A3E442C2721900066BEFC /* ContentView.swift in Sources */,
 				3108C55B2C6DA9640066B1EB /* TeamDataView.swift in Sources */,
@@ -542,7 +546,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.whitwam.sar360;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.whitwam.sar360;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -571,7 +575,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.whitwam.sar360;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.whitwam.sar360;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

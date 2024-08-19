@@ -10,5 +10,8 @@ import Foundation
 class TrainingArchiveViewModel: ObservableObject {
     @Published var showingRecordTrainingViewModel = false
     
+    @Published var teams = ["team1", "team2", "team3", "team4"]
+    @Published var team = ""
+    
     init() {}
 }

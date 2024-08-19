@@ -16,9 +16,6 @@ struct TrainingArchiveView: View {
         self.userId = userId
     }*/
     
-    var fruits = ["apple", "banana", "orange", "kiwi"]
-    @State private  var selectedFruit: String = "banana"
-    
     let allItems = Array(1...50).map { "Item \($0)" } // Example data: 50 items
     @State private var currentIndex = 0
     private let itemsPerPage = 10
@@ -27,27 +24,20 @@ struct TrainingArchiveView: View {
         NavigationView{
             VStack {
                 
-                HStack{
-                    Text("Select Team:")
-                    .font(.system(size: 20))
-                    .foregroundColor(Color("CustomGreen"))
-                    .multilineTextAlignment(.leading)
+                Text("Training Archive")
+                    .padding(.top, 20)
+                    .font(.system(size: 30))
                     .bold()
-                    .padding(.top, 10)
-                    
-                    Menu(content: {
-                        Picker("fruits", selection: $selectedFruit) {
-                            ForEach(fruits, id: \.self) { fruit in
-                                Text(fruit)
-                            }
+                
+                Form{
+                    Picker("Team", selection: $viewModel.team) {
+                        ForEach(viewModel.teams, id: \.self) { team in
+                            Text(team)
                         }
-                    }, label: {
-                        (Text("\(selectedFruit) ") + Text(Image(systemName: "chevron.down")))
-                    })
-                    .padding(.all, 15)
-                    .foregroundStyle(Color.white)
-                    .background(RoundedRectangle(cornerRadius: 16).fill(Color("CustomGreen")))
+                    }
                 }
+                .frame(height: 80)
+                .scrollContentBackground(.hidden)
                 
                 ZStack{
                     VStack {
@@ -56,12 +46,14 @@ struct TrainingArchiveView: View {
                                     Text(item)
                                 }
                         }
+                        .scrollContentBackground(.hidden)
                             
                         HStack {
                             Button(action: previousPage) {
                                 Text("Previous")
                             }
                             .disabled(currentIndex == 0)
+                            .foregroundColor(Color("CustomGreen"))
                                 
                             Spacer()
                                 
@@ -69,6 +61,7 @@ struct TrainingArchiveView: View {
                                 Text("Next")
                             }
                             .disabled(currentIndex + itemsPerPage >= allItems.count)
+                            .foregroundColor(Color("CustomGreen"))
                         }
                         .padding()
                     }
@@ -76,13 +69,13 @@ struct TrainingArchiveView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color("CustomBackground"))
-            .navigationTitle("Training Archive")
             .toolbar{
                 Button {
                     viewModel.showingRecordTrainingViewModel = true
                 } label: {
                     Image(systemName: "plus")
                 }
+                .foregroundColor(Color("CustomGreen"))
             }
             .sheet(isPresented: $viewModel.showingRecordTrainingViewModel){
                 RecordTrainingView()

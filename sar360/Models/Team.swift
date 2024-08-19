@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct Team{
+    let team_id: String
+    let team_name: String
+    let team_members: [String]
+    let team_guests: [String]
+    let team_trainings: [String]
+    let team_training_locations: [String]
+    let team_training_types: [String]
+}

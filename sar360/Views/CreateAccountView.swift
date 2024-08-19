@@ -8,93 +8,72 @@
 import SwiftUI
 
 struct CreateAccountView: View {
-    @State private var fname: String = ""
-    @State private var lname: String = ""
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var cpassword: String = ""
+    @StateObject var viewModel = CreateAccountViewModel()
     
     var body: some View {
-            ScrollView{
-                VStack {
-                    VStack{
-                        Text("First Name")
-                            .foregroundColor(Color.black)
-                            .multilineTextAlignment(.leading)
-                            .padding(.top, 20)
+        
+        VStack{
+            Text("Create an Account")
+                .padding(.top, 20)
+                .font(.system(size: 30))
+                .bold()
+            
+            VStack{
+                VStack{
+                    Form{
                         
-                        TextField("First Name", text: $fname)
-                            .padding()
-                            .background(Color("CustomBackground"))
-                            .foregroundColor(Color.black)
-                            .cornerRadius(5)
-                            .padding(EdgeInsets(top: 0, leading: 40, bottom: 15, trailing: 40))
+                        Section(header: Text("First Name").foregroundColor(Color("CustomGreen"))) {
+                            TextField("First Name", text: $viewModel.first_name)
+                        }
                         
-                        Text("Last Name")
-                            .foregroundColor(Color.black)
-                            .multilineTextAlignment(.leading)
+                        Section(header: Text("Last Name").foregroundColor(Color("CustomGreen"))) {
+                            TextField("Last Name", text: $viewModel.last_name)
+                        }
                         
-                        TextField("Last Name", text: $lname)
-                            .padding()
-                            .background(Color("CustomBackground"))
-                            .foregroundColor(Color.black)
-                            .cornerRadius(5)
-                            .padding(EdgeInsets(top: 0, leading: 40, bottom: 15, trailing: 40))
+                        Section(header: Text("Email").foregroundColor(Color("CustomGreen"))) {
+                            TextField("Email", text: $viewModel.email)
+                        }
                         
-                        Text("Email")
-                            .foregroundColor(Color.black)
-                            .multilineTextAlignment(.leading)
+                        Section(header: Text("Password").foregroundColor(Color("CustomGreen"))) {
+                            TextField("Password", text: $viewModel.password)
+                        }
                         
-                        TextField("Email", text: $email)
-                            .padding()
-                            .background(Color("CustomBackground"))
-                            .foregroundColor(Color.black)
-                            .cornerRadius(5)
-                            .padding(EdgeInsets(top: 0, leading: 40, bottom: 15, trailing: 40))
+                        Section(header: Text("Confirm Password").foregroundColor(Color("CustomGreen"))) {
+                            TextField("Confirm Password", text: $viewModel.cpassword)
+                        }
                         
-                        Text("Password")
-                            .foregroundColor(Color.black)
-                            .multilineTextAlignment(.leading)
+                        Section(footer: signUpButton) {
+                            EmptyView()
+                        }
                         
-                        TextField("Password", text: $password)
-                            .padding()
-                            .background(Color("CustomBackground"))
-                            .foregroundColor(Color.black)
-                            .cornerRadius(5)
-                            .padding(EdgeInsets(top: 0, leading: 40, bottom: 15, trailing: 40))
-                        
-                        Text("Confirm Password")
-                            .foregroundColor(Color.black)
-                            .multilineTextAlignment(.leading)
-                        
-                        TextField("Confirm Password", text: $cpassword)
-                            .padding()
-                            .background(Color("CustomBackground"))
-                            .foregroundColor(Color.black)
-                            .cornerRadius(5)
-                            .padding(EdgeInsets(top: 0, leading: 40, bottom: 30, trailing: 40))
                     }
-                    .background(Color("CustomBrown"))
-                    .cornerRadius(30)
-                    .padding(EdgeInsets(top: 15, leading: 20, bottom: 15, trailing: 20))
-                    
-                    NavigationLink(destination: WelcomeJoinTeamView()){
-                        Text("Sign Up")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding(EdgeInsets(top: 15, leading: 70, bottom: 15, trailing: 70))
-                            .background(Color("CustomGreen"))
-                            .cornerRadius(15)
-                            .shadow(radius: 5)
-                            .padding(.top, 10)
-                            .padding(.bottom, 10)
-                    }
+                    .scrollContentBackground(.hidden)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .edgesIgnoringSafeArea(.all)
+                .background(Color("CustomBrown"))
+                .cornerRadius(30)
+                .padding()
             }
-            .background(Color("CustomBackground"))
+            .background(Color("CustomBackground")).ignoresSafeArea()
         }
+        .background(Color("CustomBackground"))
+    }
+}
+
+private var signUpButton: some View {
+        Button(action: signUpForm) {
+            Text("Sign Up")
+                .frame(maxWidth: .infinity)
+                .font(.headline)
+                .foregroundColor(.white)
+                .padding(EdgeInsets(top: 15, leading: 70, bottom: 15, trailing: 70))
+                .background(Color("CustomGreen"))
+                .cornerRadius(15)
+                .shadow(radius: 5)
+    }
+}
+
+private func signUpForm() {
+    // Add save logic here
 }
 
 struct CreateAccountView_Previews: PreviewProvider {

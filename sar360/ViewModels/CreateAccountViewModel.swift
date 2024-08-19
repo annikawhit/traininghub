@@ -8,5 +8,12 @@
 import Foundation
 
 class CreateAccountViewModel: ObservableObject {
+    
+    @Published var first_name = ""
+    @Published var last_name = ""
+    @Published var email = ""
+    @Published var password = ""
+    @Published var cpassword = ""
+    
     init() {}
 }
