@@ -21,6 +21,9 @@
 		3108C5762C705C060066B1EB /* RecordTrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108C5752C705C060066B1EB /* RecordTrainingViewModel.swift */; };
 		3108C5782C705C3E0066B1EB /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108C5772C705C3E0066B1EB /* ProfileViewModel.swift */; };
 		3108C57A2C727B010066B1EB /* ChangeUserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108C5792C727B010066B1EB /* ChangeUserDataViewModel.swift */; };
+		313199F62C758C3500C43ED2 /* CreateTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313199F52C758C3500C43ED2 /* CreateTeamViewModel.swift */; };
+		313199F82C758D7600C43ED2 /* WelcomeTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313199F72C758D7600C43ED2 /* WelcomeTeamViewModel.swift */; };
+		313199FA2C758FF800C43ED2 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313199F92C758FF800C43ED2 /* SettingsViewModel.swift */; };
 		314A3E422C2721900066BEFC /* sar360App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E412C2721900066BEFC /* sar360App.swift */; };
 		314A3E442C2721900066BEFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E432C2721900066BEFC /* ContentView.swift */; };
 		314A3E462C2721910066BEFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 314A3E452C2721910066BEFC /* Assets.xcassets */; };
@@ -69,6 +72,9 @@
 		3108C5752C705C060066B1EB /* RecordTrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTrainingViewModel.swift; sourceTree = "<group>"; };
 		3108C5772C705C3E0066B1EB /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		3108C5792C727B010066B1EB /* ChangeUserDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataViewModel.swift; sourceTree = "<group>"; };
+		313199F52C758C3500C43ED2 /* CreateTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamViewModel.swift; sourceTree = "<group>"; };
+		313199F72C758D7600C43ED2 /* WelcomeTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTeamViewModel.swift; sourceTree = "<group>"; };
+		313199F92C758FF800C43ED2 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		314A3E3E2C2721900066BEFC /* sar360.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sar360.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		314A3E412C2721900066BEFC /* sar360App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sar360App.swift; sourceTree = "<group>"; };
 		314A3E432C2721900066BEFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -142,6 +148,9 @@
 				3108C5732C705BCF0066B1EB /* TrainingArchiveViewModel.swift */,
 				3108C5752C705C060066B1EB /* RecordTrainingViewModel.swift */,
 				3108C5792C727B010066B1EB /* ChangeUserDataViewModel.swift */,
+				313199F52C758C3500C43ED2 /* CreateTeamViewModel.swift */,
+				313199F72C758D7600C43ED2 /* WelcomeTeamViewModel.swift */,
+				313199F92C758FF800C43ED2 /* SettingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -371,7 +380,10 @@
 				3108C55D2C6ED3110066B1EB /* ChangeUserDataView.swift in Sources */,
 				314A3E702C2737870066BEFC /* HomeView.swift in Sources */,
 				314A3E722C2BA97A0066BEFC /* WelcomeJoinTeamView.swift in Sources */,
+				313199F62C758C3500C43ED2 /* CreateTeamViewModel.swift in Sources */,
 				3108C5782C705C3E0066B1EB /* ProfileViewModel.swift in Sources */,
+				313199FA2C758FF800C43ED2 /* SettingsViewModel.swift in Sources */,
+				313199F82C758D7600C43ED2 /* WelcomeTeamViewModel.swift in Sources */,
 				3108C5722C7058A70066B1EB /* ProfileView.swift in Sources */,
 				314A3E422C2721900066BEFC /* sar360App.swift in Sources */,
 				314A3E742C2D02E40066BEFC /* TrainingArchiveView.swift in Sources */,

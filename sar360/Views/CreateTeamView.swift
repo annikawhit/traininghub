@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CreateTeamView: View {
     
-    @State private var teamName: String = ""
+    @StateObject var viewModel = CreateTeamViewModel()
     
     var body: some View {
         ZStack {
@@ -30,7 +30,7 @@ struct CreateTeamView: View {
                         .padding(.top, 50)
                         .padding(.bottom, 180)
                     
-                    TextField("Team Name", text: $teamName)
+                    TextField("Team Name", text: $viewModel.teamName)
                         .padding(.vertical, 10)
                         .overlay(Rectangle().frame(height: 1)
                         .padding(.top, 35), alignment: .bottom)

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    let teams = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5"]
+    @StateObject var viewModel = SettingsViewModel()
     
     let columns: [GridItem] = [
         GridItem(.fixed(120)),
@@ -18,29 +18,26 @@ struct SettingsView: View {
     ]
     
     var body: some View {
-            ScrollView{
+        VStack{
+            Text("Settings")
+                .padding(.top, 20)
+                .font(.system(size: 30))
+                .bold()
+            
                 VStack {
-                    Text("Settings")
-                        .font(.largeTitle)
-                        .foregroundColor(Color("CustomGreen"))
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .bold()
-                        .padding(.top, 75)
-                        .padding(.bottom, 20)
-                        .padding()
                     
                     
                     NavigationLink(destination: RecordTrainingView()){
                         Text("Change Email and Password")
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .padding(EdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 15))
-                                .background(Color("CustomGreen"))
-                                .cornerRadius(15)
-                                .shadow(radius: 5)
-                                .padding(.top, 10)
-                                .padding(.bottom, 30)
-                                .padding(.leading, 5)
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding(EdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 15))
+                            .background(Color("CustomGreen"))
+                            .cornerRadius(15)
+                            .shadow(radius: 5)
+                            .padding(.top, 10)
+                            .padding(.bottom, 30)
+                            .padding(.leading, 5)
                     }
                     
                     VStack {
@@ -54,7 +51,7 @@ struct SettingsView: View {
                             .padding()
                         
                         LazyVGrid(columns: columns, spacing: 10) {
-                            ForEach(teams, id: \.self) { item in
+                            ForEach(viewModel.teams, id: \.self) { item in
                                 Text(item)
                                 
                                 NavigationLink(destination: TeamDataView()){
@@ -85,10 +82,10 @@ struct SettingsView: View {
                     .padding(EdgeInsets(top: 15, leading: 20, bottom: 15, trailing: 20))
                     
                 }
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .edgesIgnoringSafeArea(.all)
-            .background(Color("CustomBackground"))
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .edgesIgnoringSafeArea(.all)
+        .background(Color("CustomBackground"))
     }
 }
 

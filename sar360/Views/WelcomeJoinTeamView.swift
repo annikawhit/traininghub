@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WelcomeJoinTeamView: View {
     
-    @State private var teamID: String = ""
+    @StateObject var viewModel = WelcomeTeamViewModel()
     
     var body: some View {
         ZStack {
@@ -37,7 +37,7 @@ struct WelcomeJoinTeamView: View {
                         .multilineTextAlignment(.center)
                         .padding(.bottom, 150)
                     
-                    TextField("Team ID", text: $teamID)
+                    TextField("Team ID", text: $viewModel.teamID)
                         .padding(.vertical, 10)
                         .overlay(Rectangle().frame(height: 1)
                         .padding(.top, 35), alignment: .bottom)
