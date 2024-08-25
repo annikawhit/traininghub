@@ -17,6 +17,8 @@ class RecordTrainingViewModel: ObservableObject {
     @Published var name = ""
     @Published var type = ""
     @Published var date = Date()
+    @Published var startTime = Date()
+    @Published var endTime = Date()
     @Published var location = ""
     @Published var selectedParticipants = ""
     

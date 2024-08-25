@@ -24,6 +24,8 @@
 		313199F62C758C3500C43ED2 /* CreateTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313199F52C758C3500C43ED2 /* CreateTeamViewModel.swift */; };
 		313199F82C758D7600C43ED2 /* WelcomeTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313199F72C758D7600C43ED2 /* WelcomeTeamViewModel.swift */; };
 		313199FA2C758FF800C43ED2 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313199F92C758FF800C43ED2 /* SettingsViewModel.swift */; };
+		313199FE2C78391300C43ED2 /* JoinTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313199FD2C78391300C43ED2 /* JoinTeamView.swift */; };
+		31319A002C78392600C43ED2 /* JoinTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313199FF2C78392600C43ED2 /* JoinTeamViewModel.swift */; };
 		314A3E422C2721900066BEFC /* sar360App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E412C2721900066BEFC /* sar360App.swift */; };
 		314A3E442C2721900066BEFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E432C2721900066BEFC /* ContentView.swift */; };
 		314A3E462C2721910066BEFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 314A3E452C2721910066BEFC /* Assets.xcassets */; };
@@ -75,6 +77,8 @@
 		313199F52C758C3500C43ED2 /* CreateTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamViewModel.swift; sourceTree = "<group>"; };
 		313199F72C758D7600C43ED2 /* WelcomeTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTeamViewModel.swift; sourceTree = "<group>"; };
 		313199F92C758FF800C43ED2 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		313199FD2C78391300C43ED2 /* JoinTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTeamView.swift; sourceTree = "<group>"; };
+		313199FF2C78392600C43ED2 /* JoinTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTeamViewModel.swift; sourceTree = "<group>"; };
 		314A3E3E2C2721900066BEFC /* sar360.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sar360.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		314A3E412C2721900066BEFC /* sar360App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sar360App.swift; sourceTree = "<group>"; };
 		314A3E432C2721900066BEFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 				314A3E6D2C2734AA0066BEFC /* CreateAccountView.swift */,
 				3108C55E2C703A2C0066B1EB /* CreateTeamView.swift */,
 				3108C5712C7058A70066B1EB /* ProfileView.swift */,
+				313199FD2C78391300C43ED2 /* JoinTeamView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 				313199F52C758C3500C43ED2 /* CreateTeamViewModel.swift */,
 				313199F72C758D7600C43ED2 /* WelcomeTeamViewModel.swift */,
 				313199F92C758FF800C43ED2 /* SettingsViewModel.swift */,
+				313199FF2C78392600C43ED2 /* JoinTeamViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -377,6 +383,8 @@
 				3108C5742C705BCF0066B1EB /* TrainingArchiveViewModel.swift in Sources */,
 				3108C56A2C70536C0066B1EB /* TrainingSession.swift in Sources */,
 				314A3E6E2C2734AA0066BEFC /* CreateAccountView.swift in Sources */,
+				313199FE2C78391300C43ED2 /* JoinTeamView.swift in Sources */,
+				31319A002C78392600C43ED2 /* JoinTeamViewModel.swift in Sources */,
 				3108C55D2C6ED3110066B1EB /* ChangeUserDataView.swift in Sources */,
 				314A3E702C2737870066BEFC /* HomeView.swift in Sources */,
 				314A3E722C2BA97A0066BEFC /* WelcomeJoinTeamView.swift in Sources */,

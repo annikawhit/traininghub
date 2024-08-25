@@ -43,9 +43,18 @@ struct RecordTrainingView: View {
                         }
                     }
                     
-                    Section(header: Text("Date of the Training Session").foregroundColor(Color("CustomGreen"))){
+                    Section(header: Text("Date/Time of the Training Session").foregroundColor(Color("CustomGreen"))){
                         DatePicker("Date", selection: $viewModel.date, displayedComponents: .date)
-                            .datePickerStyle(GraphicalDatePickerStyle()) // Use graphical style for calendar view
+                            .datePickerStyle(GraphicalDatePickerStyle())
+                            .padding()
+                        // Start Time Picker
+                        DatePicker("Start Time", selection: $viewModel.startTime, displayedComponents: [.hourAndMinute])
+                            .datePickerStyle(CompactDatePickerStyle())
+                            .padding()
+                                        
+                        // End Time Picker
+                        DatePicker("End Time", selection: $viewModel.endTime, displayedComponents: [.hourAndMinute])
+                            .datePickerStyle(CompactDatePickerStyle())
                             .padding()
                     }
                     

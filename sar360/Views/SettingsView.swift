@@ -20,15 +20,28 @@ struct SettingsView: View {
     var body: some View {
         VStack{
             Text("Settings")
-                .padding(.top, 20)
+                .padding(.top, 90)
                 .font(.system(size: 30))
                 .bold()
             
                 VStack {
                     
                     
-                    NavigationLink(destination: RecordTrainingView()){
+                    NavigationLink(destination: ChangeUserDataView()){
                         Text("Change Email and Password")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding(EdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 15))
+                            .background(Color("CustomGreen"))
+                            .cornerRadius(15)
+                            .shadow(radius: 5)
+                            .padding(.top, 100)
+                            .padding(.bottom, 30)
+                            .padding(.leading, 5)
+                    }
+                    
+                    NavigationLink(destination: LoginView()){
+                        Text("Log Out")
                             .font(.headline)
                             .foregroundColor(.white)
                             .padding(EdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 15))
@@ -39,49 +52,9 @@ struct SettingsView: View {
                             .padding(.bottom, 30)
                             .padding(.leading, 5)
                     }
-                    
-                    VStack {
-                        Text("My Teams:")
-                            .font(.title)
-                            .foregroundColor(Color("CustomGreen"))
-                            .bold()
-                            .padding(.top, 10)
-                            .padding(.leading, 20)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding()
-                        
-                        LazyVGrid(columns: columns, spacing: 10) {
-                            ForEach(viewModel.teams, id: \.self) { item in
-                                Text(item)
-                                
-                                NavigationLink(destination: TeamDataView()){
-                                    Text("Leave Team")
-                                        .font(.headline)
-                                        .foregroundColor(.white)
-                                        .padding(EdgeInsets(top: 15, leading: 20, bottom: 15, trailing: 20))
-                                        .background(Color("CustomGreen"))
-                                        .cornerRadius(15)
-                                        .shadow(radius: 5)
-                                }
-                                
-                                NavigationLink(destination: TeamDataView()){
-                                    Text("View Team Data")
-                                        .font(.headline)
-                                        .foregroundColor(.white)
-                                        .padding(EdgeInsets(top: 15, leading: 20, bottom: 15, trailing: 20))
-                                        .background(Color("CustomGreen"))
-                                        .cornerRadius(15)
-                                        .shadow(radius: 5)
-                                }
-                            }
-                        }
-                        .padding(.bottom, 20)
-                    }
-                    .background(Color("CustomBrown"))
-                    .cornerRadius(30)
-                    .padding(EdgeInsets(top: 15, leading: 20, bottom: 15, trailing: 20))
-                    
                 }
+            
+            Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .edgesIgnoringSafeArea(.all)

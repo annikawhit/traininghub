@@ -11,26 +11,51 @@ struct ProfileView: View {
     @StateObject var viewModel = ProfileViewModel()
     
     var body: some View {
-        NavigationView{
-            VStack{
+        VStack{
+                Text(viewModel.name)
+                    .padding(.top, 20)
+                    .font(.system(size: 30))
+                    .bold()
+                    
                 HStack{
+                    Button {
+                        viewModel.showingJoinTeamViewModel = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    .foregroundColor(Color("CustomGreen"))
+                    .font(.system(size: 30))
+                    .padding(.top, 0)
+                    .padding(.leading, 30)
+                    
                     Spacer()
                     
                     NavigationLink(destination: SettingsView()){
                         Image(systemName: "gearshape")
-                            .foregroundColor(.black)
-                            .font(.system(size: 30))
-                            .padding(.top, 20)
-                            .padding(.trailing, 30)
                     }
+                    .foregroundColor(Color("CustomGreen"))
+                    .font(.system(size: 30))
+                    .padding(.top, 0)
+                    .padding(.trailing, 30)
                 }
                 
-                Spacer()
+                ZStack{
+                    VStack {
+                        List(viewModel.teams, id: \.self) { team in
+                                NavigationLink(destination: TeamDataView()){
+                                    Text(team)
+                                }
+                        }
+                        .scrollContentBackground(.hidden)
+                    }
+                }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color("CustomBackground"))
-            .navigationTitle("name")
-        }
+        
+            .sheet(isPresented: $viewModel.showingJoinTeamViewModel){
+                JoinTeamView()
+            }
     }
 }
 

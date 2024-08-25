@@ -18,25 +18,47 @@ struct TrainingArchiveView: View {
     
     let allItems = Array(1...50).map { "Item \($0)" } // Example data: 50 items
     @State private var currentIndex = 0
-    private let itemsPerPage = 10
+    private let itemsPerPage = 8
 
     var body: some View {
         NavigationView{
             VStack {
-                
                 Text("Training Archive")
                     .padding(.top, 20)
                     .font(.system(size: 30))
                     .bold()
+                    
+                HStack{
+                    Spacer()
+                    
+                    Button {
+                        viewModel.showingRecordTrainingViewModel = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    .foregroundColor(Color("CustomGreen"))
+                    .font(.system(size: 30))
+                    .padding(.top, 1)
+                    .padding(.trailing, 30)
+                }
                 
                 Form{
-                    Picker("Team", selection: $viewModel.team) {
-                        ForEach(viewModel.teams, id: \.self) { team in
-                            Text(team)
+                    Section(header: Text("Filters")) {
+                            
+                        Picker("Team", selection: $viewModel.team) {
+                            ForEach(viewModel.teams, id: \.self) { team in
+                                Text(team)
+                            }
                         }
+                            
+                        Toggle(isOn: $viewModel.myTrainings) {
+                            Text("Display Only My Trainings")
+                        }
+                        .toggleStyle(SwitchToggleStyle())
+                            
                     }
                 }
-                .frame(height: 80)
+                .frame(height: 130)
                 .scrollContentBackground(.hidden)
                 
                 ZStack{
@@ -69,14 +91,7 @@ struct TrainingArchiveView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color("CustomBackground"))
-            .toolbar{
-                Button {
-                    viewModel.showingRecordTrainingViewModel = true
-                } label: {
-                    Image(systemName: "plus")
-                }
-                .foregroundColor(Color("CustomGreen"))
-            }
+            
             .sheet(isPresented: $viewModel.showingRecordTrainingViewModel){
                 RecordTrainingView()
             }
