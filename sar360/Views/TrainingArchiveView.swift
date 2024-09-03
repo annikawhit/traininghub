@@ -18,7 +18,9 @@ struct TrainingArchiveView: View {
     
     let allItems = Array(1...50).map { "Item \($0)" } // Example data: 50 items
     @State private var currentIndex = 0
-    private let itemsPerPage = 8
+    
+    //var items: [TrainingSession]
+    //private let itemsPerPage = 8
 
     var body: some View {
         NavigationView{
@@ -63,14 +65,14 @@ struct TrainingArchiveView: View {
                 
                 ZStack{
                     VStack {
-                        List(currentItems, id: \.self) { item in
-                                NavigationLink(destination: RecordTrainingView()){
-                                    Text(item)
-                                }
+                        List(allItems, id: \.self) { item in
+                            NavigationLink(destination: RecordTrainingView()){
+                                Text(item)
+                            }
                         }
                         .scrollContentBackground(.hidden)
                             
-                        HStack {
+                        /*HStack {
                             Button(action: previousPage) {
                                 Text("Previous")
                             }
@@ -82,10 +84,10 @@ struct TrainingArchiveView: View {
                             Button(action: nextPage) {
                                 Text("Next")
                             }
-                            .disabled(currentIndex + itemsPerPage >= allItems.count)
+                            .disabled(currentIndex + itemsPerPage >= items.count)
                             .foregroundColor(Color("CustomGreen"))
                         }
-                        .padding()
+                        .padding()*/
                     }
                 }
             }
@@ -100,13 +102,13 @@ struct TrainingArchiveView: View {
     }
     
 
-    private var currentItems: [String] {
-            let endIndex = min(currentIndex + itemsPerPage, allItems.count)
-            return Array(allItems[currentIndex..<endIndex])
+    /*private var currentItems: [String] {
+            let endIndex = min(currentIndex + itemsPerPage, items.count)
+            return Array(items[currentIndex..<endIndex])
     }
         
     private func nextPage() {
-            if currentIndex + itemsPerPage < allItems.count {
+            if currentIndex + itemsPerPage < items.count {
                 currentIndex += itemsPerPage
             }
     }
@@ -115,7 +117,7 @@ struct TrainingArchiveView: View {
             if currentIndex - itemsPerPage >= 0 {
                 currentIndex -= itemsPerPage
             }
-    }
+    }*/
 }
 
 struct TrainingArchiveView_Previews: PreviewProvider {

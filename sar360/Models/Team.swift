@@ -8,7 +8,7 @@
 import Foundation
 
 struct Team{
-    let team_id: String
+    let id: String
     let team_name: String
     let team_members: [String]
     let team_guests: [String]
