@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct sar360App: App {
+struct syncsarApp: App {
     var body: some Scene {
         WindowGroup {
             LoginView()

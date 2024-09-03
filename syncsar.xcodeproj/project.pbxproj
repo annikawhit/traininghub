@@ -27,13 +27,13 @@
 		313199FE2C78391300C43ED2 /* JoinTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313199FD2C78391300C43ED2 /* JoinTeamView.swift */; };
 		31319A002C78392600C43ED2 /* JoinTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313199FF2C78392600C43ED2 /* JoinTeamViewModel.swift */; };
 		31319A022C86935100C43ED2 /* TrainingArchiveItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31319A012C86935100C43ED2 /* TrainingArchiveItemView.swift */; };
-		314A3E422C2721900066BEFC /* sar360App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E412C2721900066BEFC /* sar360App.swift */; };
+		314A3E422C2721900066BEFC /* syncsarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E412C2721900066BEFC /* syncsarApp.swift */; };
 		314A3E442C2721900066BEFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E432C2721900066BEFC /* ContentView.swift */; };
 		314A3E462C2721910066BEFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 314A3E452C2721910066BEFC /* Assets.xcassets */; };
 		314A3E492C2721910066BEFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 314A3E482C2721910066BEFC /* Preview Assets.xcassets */; };
-		314A3E532C2721910066BEFC /* sar360Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E522C2721910066BEFC /* sar360Tests.swift */; };
-		314A3E5D2C2721920066BEFC /* sar360UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E5C2C2721920066BEFC /* sar360UITests.swift */; };
-		314A3E5F2C2721920066BEFC /* sar360UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E5E2C2721920066BEFC /* sar360UITestsLaunchTests.swift */; };
+		314A3E532C2721910066BEFC /* syncsarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E522C2721910066BEFC /* syncsarTests.swift */; };
+		314A3E5D2C2721920066BEFC /* syncsarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E5C2C2721920066BEFC /* syncsarUITests.swift */; };
+		314A3E5F2C2721920066BEFC /* syncsarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E5E2C2721920066BEFC /* syncsarUITestsLaunchTests.swift */; };
 		314A3E6C2C2734890066BEFC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E6B2C2734890066BEFC /* LoginView.swift */; };
 		314A3E6E2C2734AA0066BEFC /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E6D2C2734AA0066BEFC /* CreateAccountView.swift */; };
 		314A3E702C2737870066BEFC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A3E6F2C2737870066BEFC /* HomeView.swift */; };
@@ -81,16 +81,16 @@
 		313199FD2C78391300C43ED2 /* JoinTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTeamView.swift; sourceTree = "<group>"; };
 		313199FF2C78392600C43ED2 /* JoinTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTeamViewModel.swift; sourceTree = "<group>"; };
 		31319A012C86935100C43ED2 /* TrainingArchiveItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingArchiveItemView.swift; sourceTree = "<group>"; };
-		314A3E3E2C2721900066BEFC /* sar360.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sar360.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		314A3E412C2721900066BEFC /* sar360App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sar360App.swift; sourceTree = "<group>"; };
+		314A3E3E2C2721900066BEFC /* syncsar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = syncsar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		314A3E412C2721900066BEFC /* syncsarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = syncsarApp.swift; sourceTree = "<group>"; };
 		314A3E432C2721900066BEFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		314A3E452C2721910066BEFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		314A3E482C2721910066BEFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		314A3E4E2C2721910066BEFC /* sar360Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sar360Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		314A3E522C2721910066BEFC /* sar360Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sar360Tests.swift; sourceTree = "<group>"; };
-		314A3E582C2721920066BEFC /* sar360UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sar360UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		314A3E5C2C2721920066BEFC /* sar360UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sar360UITests.swift; sourceTree = "<group>"; };
-		314A3E5E2C2721920066BEFC /* sar360UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sar360UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		314A3E4E2C2721910066BEFC /* syncsarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = syncsarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		314A3E522C2721910066BEFC /* syncsarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = syncsarTests.swift; sourceTree = "<group>"; };
+		314A3E582C2721920066BEFC /* syncsarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = syncsarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		314A3E5C2C2721920066BEFC /* syncsarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = syncsarUITests.swift; sourceTree = "<group>"; };
+		314A3E5E2C2721920066BEFC /* syncsarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = syncsarUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		314A3E6B2C2734890066BEFC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		314A3E6D2C2734AA0066BEFC /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		314A3E6F2C2737870066BEFC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 		3108C5642C704F7B0066B1EB /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				314A3E412C2721900066BEFC /* sar360App.swift */,
+				314A3E412C2721900066BEFC /* syncsarApp.swift */,
 				314A3E452C2721910066BEFC /* Assets.xcassets */,
 			);
 			path = Other;
@@ -193,9 +193,9 @@
 		314A3E352C2721900066BEFC = {
 			isa = PBXGroup;
 			children = (
-				314A3E402C2721900066BEFC /* sar360 */,
-				314A3E512C2721910066BEFC /* sar360Tests */,
-				314A3E5B2C2721920066BEFC /* sar360UITests */,
+				314A3E402C2721900066BEFC /* syncsar */,
+				314A3E512C2721910066BEFC /* syncsarTests */,
+				314A3E5B2C2721920066BEFC /* syncsarUITests */,
 				314A3E3F2C2721900066BEFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -203,14 +203,14 @@
 		314A3E3F2C2721900066BEFC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				314A3E3E2C2721900066BEFC /* sar360.app */,
-				314A3E4E2C2721910066BEFC /* sar360Tests.xctest */,
-				314A3E582C2721920066BEFC /* sar360UITests.xctest */,
+				314A3E3E2C2721900066BEFC /* syncsar.app */,
+				314A3E4E2C2721910066BEFC /* syncsarTests.xctest */,
+				314A3E582C2721920066BEFC /* syncsarUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		314A3E402C2721900066BEFC /* sar360 */ = {
+		314A3E402C2721900066BEFC /* syncsar */ = {
 			isa = PBXGroup;
 			children = (
 				31319A072C86A31800C43ED2 /* Database */,
@@ -220,7 +220,7 @@
 				3108C5602C704F100066B1EB /* Views */,
 				314A3E472C2721910066BEFC /* Preview Content */,
 			);
-			path = sar360;
+			path = syncsar;
 			sourceTree = "<group>";
 		};
 		314A3E472C2721910066BEFC /* Preview Content */ = {
@@ -231,29 +231,29 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		314A3E512C2721910066BEFC /* sar360Tests */ = {
+		314A3E512C2721910066BEFC /* syncsarTests */ = {
 			isa = PBXGroup;
 			children = (
-				314A3E522C2721910066BEFC /* sar360Tests.swift */,
+				314A3E522C2721910066BEFC /* syncsarTests.swift */,
 			);
-			path = sar360Tests;
+			path = syncsarTests;
 			sourceTree = "<group>";
 		};
-		314A3E5B2C2721920066BEFC /* sar360UITests */ = {
+		314A3E5B2C2721920066BEFC /* syncsarUITests */ = {
 			isa = PBXGroup;
 			children = (
-				314A3E5C2C2721920066BEFC /* sar360UITests.swift */,
-				314A3E5E2C2721920066BEFC /* sar360UITestsLaunchTests.swift */,
+				314A3E5C2C2721920066BEFC /* syncsarUITests.swift */,
+				314A3E5E2C2721920066BEFC /* syncsarUITestsLaunchTests.swift */,
 			);
-			path = sar360UITests;
+			path = syncsarUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		314A3E3D2C2721900066BEFC /* sar360 */ = {
+		314A3E3D2C2721900066BEFC /* syncsar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 314A3E622C2721920066BEFC /* Build configuration list for PBXNativeTarget "sar360" */;
+			buildConfigurationList = 314A3E622C2721920066BEFC /* Build configuration list for PBXNativeTarget "syncsar" */;
 			buildPhases = (
 				314A3E3A2C2721900066BEFC /* Sources */,
 				314A3E3B2C2721900066BEFC /* Frameworks */,
@@ -263,14 +263,14 @@
 			);
 			dependencies = (
 			);
-			name = sar360;
+			name = syncsar;
 			productName = sar360;
-			productReference = 314A3E3E2C2721900066BEFC /* sar360.app */;
+			productReference = 314A3E3E2C2721900066BEFC /* syncsar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		314A3E4D2C2721910066BEFC /* sar360Tests */ = {
+		314A3E4D2C2721910066BEFC /* syncsarTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 314A3E652C2721920066BEFC /* Build configuration list for PBXNativeTarget "sar360Tests" */;
+			buildConfigurationList = 314A3E652C2721920066BEFC /* Build configuration list for PBXNativeTarget "syncsarTests" */;
 			buildPhases = (
 				314A3E4A2C2721910066BEFC /* Sources */,
 				314A3E4B2C2721910066BEFC /* Frameworks */,
@@ -281,14 +281,14 @@
 			dependencies = (
 				314A3E502C2721910066BEFC /* PBXTargetDependency */,
 			);
-			name = sar360Tests;
+			name = syncsarTests;
 			productName = sar360Tests;
-			productReference = 314A3E4E2C2721910066BEFC /* sar360Tests.xctest */;
+			productReference = 314A3E4E2C2721910066BEFC /* syncsarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		314A3E572C2721920066BEFC /* sar360UITests */ = {
+		314A3E572C2721920066BEFC /* syncsarUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 314A3E682C2721920066BEFC /* Build configuration list for PBXNativeTarget "sar360UITests" */;
+			buildConfigurationList = 314A3E682C2721920066BEFC /* Build configuration list for PBXNativeTarget "syncsarUITests" */;
 			buildPhases = (
 				314A3E542C2721920066BEFC /* Sources */,
 				314A3E552C2721920066BEFC /* Frameworks */,
@@ -299,9 +299,9 @@
 			dependencies = (
 				314A3E5A2C2721920066BEFC /* PBXTargetDependency */,
 			);
-			name = sar360UITests;
+			name = syncsarUITests;
 			productName = sar360UITests;
-			productReference = 314A3E582C2721920066BEFC /* sar360UITests.xctest */;
+			productReference = 314A3E582C2721920066BEFC /* syncsarUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -327,7 +327,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 314A3E392C2721900066BEFC /* Build configuration list for PBXProject "sar360" */;
+			buildConfigurationList = 314A3E392C2721900066BEFC /* Build configuration list for PBXProject "syncsar" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -340,9 +340,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				314A3E3D2C2721900066BEFC /* sar360 */,
-				314A3E4D2C2721910066BEFC /* sar360Tests */,
-				314A3E572C2721920066BEFC /* sar360UITests */,
+				314A3E3D2C2721900066BEFC /* syncsar */,
+				314A3E4D2C2721910066BEFC /* syncsarTests */,
+				314A3E572C2721920066BEFC /* syncsarUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -405,7 +405,7 @@
 				313199FA2C758FF800C43ED2 /* SettingsViewModel.swift in Sources */,
 				313199F82C758D7600C43ED2 /* WelcomeTeamViewModel.swift in Sources */,
 				3108C5722C7058A70066B1EB /* ProfileView.swift in Sources */,
-				314A3E422C2721900066BEFC /* sar360App.swift in Sources */,
+				314A3E422C2721900066BEFC /* syncsarApp.swift in Sources */,
 				314A3E742C2D02E40066BEFC /* TrainingArchiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,7 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				314A3E532C2721910066BEFC /* sar360Tests.swift in Sources */,
+				314A3E532C2721910066BEFC /* syncsarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,8 +422,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				314A3E5D2C2721920066BEFC /* sar360UITests.swift in Sources */,
-				314A3E5F2C2721920066BEFC /* sar360UITestsLaunchTests.swift in Sources */,
+				314A3E5D2C2721920066BEFC /* syncsarUITests.swift in Sources */,
+				314A3E5F2C2721920066BEFC /* syncsarUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,12 +432,12 @@
 /* Begin PBXTargetDependency section */
 		314A3E502C2721910066BEFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 314A3E3D2C2721900066BEFC /* sar360 */;
+			target = 314A3E3D2C2721900066BEFC /* syncsar */;
 			targetProxy = 314A3E4F2C2721910066BEFC /* PBXContainerItemProxy */;
 		};
 		314A3E5A2C2721920066BEFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 314A3E3D2C2721900066BEFC /* sar360 */;
+			target = 314A3E3D2C2721900066BEFC /* syncsar */;
 			targetProxy = 314A3E592C2721920066BEFC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -564,11 +564,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"sar360/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"syncsar/Preview Content\"";
 				DEVELOPMENT_TEAM = 76LV94KCH4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = SAR360;
+				INFOPLIST_KEY_CFBundleDisplayName = SyncSAR;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -578,7 +578,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.whitwam.sar360;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitwamsolutions.syncsar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -593,11 +593,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"sar360/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"syncsar/Preview Content\"";
 				DEVELOPMENT_TEAM = 76LV94KCH4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = SAR360;
+				INFOPLIST_KEY_CFBundleDisplayName = SyncSAR;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -607,7 +607,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.whitwam.sar360;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitwamsolutions.syncsar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -631,7 +631,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sar360.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sar360";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/syncsar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/syncsar";
 			};
 			name = Debug;
 		};
@@ -651,7 +651,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sar360.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sar360";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/syncsar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/syncsar";
 			};
 			name = Release;
 		};
@@ -694,7 +694,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		314A3E392C2721900066BEFC /* Build configuration list for PBXProject "sar360" */ = {
+		314A3E392C2721900066BEFC /* Build configuration list for PBXProject "syncsar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				314A3E602C2721920066BEFC /* Debug */,
@@ -703,7 +703,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		314A3E622C2721920066BEFC /* Build configuration list for PBXNativeTarget "sar360" */ = {
+		314A3E622C2721920066BEFC /* Build configuration list for PBXNativeTarget "syncsar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				314A3E632C2721920066BEFC /* Debug */,
@@ -712,7 +712,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		314A3E652C2721920066BEFC /* Build configuration list for PBXNativeTarget "sar360Tests" */ = {
+		314A3E652C2721920066BEFC /* Build configuration list for PBXNativeTarget "syncsarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				314A3E662C2721920066BEFC /* Debug */,
@@ -721,7 +721,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		314A3E682C2721920066BEFC /* Build configuration list for PBXNativeTarget "sar360UITests" */ = {
+		314A3E682C2721920066BEFC /* Build configuration list for PBXNativeTarget "syncsarUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				314A3E692C2721920066BEFC /* Debug */,

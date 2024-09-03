@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class sar360UITestsLaunchTests: XCTestCase {
+final class syncsarUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
