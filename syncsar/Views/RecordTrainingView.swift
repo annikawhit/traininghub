@@ -63,6 +63,9 @@ struct RecordTrainingView: View {
                             ForEach(viewModel.locations, id: \.self) { location in
                                 Text(location)
                             }
+                            Button(action: showPopup){
+                                Text("Add Location")
+                            }
                         }
                     }
                     
@@ -110,6 +113,10 @@ private func saveForm() {
 
 private func addParticipant() {
         //add participant
+}
+                                     
+private func showPopup(){
+    // show a popup that will prompt the user to enter the new location name
 }
 
 struct RecordTrainingView_Previews: PreviewProvider {

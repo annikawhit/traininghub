@@ -20,6 +20,7 @@ class RecordTrainingViewModel: ObservableObject {
     @Published var startTime = Date()
     @Published var endTime = Date()
     @Published var location = ""
+    @Published var new_location = ""
     @Published var selectedParticipants = ""
     
     init() {}
