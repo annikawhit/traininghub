@@ -98,7 +98,6 @@
 		314A3E732C2D02E30066BEFC /* TrainingArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingArchiveView.swift; sourceTree = "<group>"; };
 		314A3E752C2D02F30066BEFC /* RecordTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTrainingView.swift; sourceTree = "<group>"; };
 		314A3E772C2D09C20066BEFC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		315684132C8A807300CAA8A3 /* test.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = test.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,7 +186,6 @@
 		31319A072C86A31800C43ED2 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				315684132C8A807300CAA8A3 /* test.md */,
 			);
 			path = Database;
 			sourceTree = "<group>";
