@@ -14,8 +14,7 @@ struct LoginView: View {
     
     var body: some View {
         
-        NavigationView {
-            ZStack {
+        ZStack {
                 GeometryReader { geometry in
                     VStack(spacing: 0) {
                         Color("CustomGreen")
@@ -83,7 +82,6 @@ struct LoginView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .edgesIgnoringSafeArea(.all)
             }
-        }
     }
 }
 
