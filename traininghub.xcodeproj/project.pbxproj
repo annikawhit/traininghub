@@ -46,6 +46,8 @@
 		31CD9B2E2C8A91AA0040C3DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31CD9B2B2C8A91AA0040C3DD /* GoogleService-Info.plist */; };
 		31CD9B3B2C8A95000040C3DD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 31CD9B3A2C8A95000040C3DD /* FirebaseAuth */; };
 		31CD9B452C8A95000040C3DD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 31CD9B442C8A95000040C3DD /* FirebaseFirestore */; };
+		31CD9B5F2C8D40010040C3DD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CD9B5E2C8D40010040C3DD /* Extensions.swift */; };
+		31CD9B612C8D445F0040C3DD /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CD9B602C8D445F0040C3DD /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		314A3E752C2D02F30066BEFC /* RecordTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTrainingView.swift; sourceTree = "<group>"; };
 		314A3E772C2D09C20066BEFC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		31CD9B2B2C8A91AA0040C3DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		31CD9B5E2C8D40010040C3DD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		31CD9B602C8D445F0040C3DD /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 				313199F72C758D7600C43ED2 /* WelcomeTeamViewModel.swift */,
 				313199F92C758FF800C43ED2 /* SettingsViewModel.swift */,
 				313199FF2C78392600C43ED2 /* JoinTeamViewModel.swift */,
+				31CD9B602C8D445F0040C3DD /* ContentViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 			children = (
 				314A3E412C2721900066BEFC /* traininghubApp.swift */,
 				314A3E452C2721910066BEFC /* Assets.xcassets */,
+				31CD9B5E2C8D40010040C3DD /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -421,7 +427,9 @@
 				314A3E722C2BA97A0066BEFC /* WelcomeJoinTeamView.swift in Sources */,
 				313199F62C758C3500C43ED2 /* CreateTeamViewModel.swift in Sources */,
 				3108C5782C705C3E0066B1EB /* ProfileViewModel.swift in Sources */,
+				31CD9B612C8D445F0040C3DD /* ContentViewModel.swift in Sources */,
 				313199FA2C758FF800C43ED2 /* SettingsViewModel.swift in Sources */,
+				31CD9B5F2C8D40010040C3DD /* Extensions.swift in Sources */,
 				313199F82C758D7600C43ED2 /* WelcomeTeamViewModel.swift in Sources */,
 				3108C5722C7058A70066B1EB /* ProfileView.swift in Sources */,
 				314A3E422C2721900066BEFC /* traininghubApp.swift in Sources */,

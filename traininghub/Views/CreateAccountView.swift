@@ -20,6 +20,13 @@ struct CreateAccountView: View {
             
             VStack{
                 VStack{
+                    
+                    if !viewModel.errorMessage.isEmpty {
+                        Text(viewModel.errorMessage)
+                            .foregroundColor(Color.red)
+                            .padding(EdgeInsets(top: 15, leading: 10, bottom: 15, trailing: 10))
+                    }
+                    
                     Form{
                         
                         Section(header: Text("First Name").foregroundColor(Color("CustomGreen"))) {
@@ -35,15 +42,37 @@ struct CreateAccountView: View {
                         }
                         
                         Section(header: Text("Password").foregroundColor(Color("CustomGreen"))) {
-                            TextField("Password", text: $viewModel.password)
+                            SecureField("Password", text: $viewModel.password)
                         }
                         
                         Section(header: Text("Confirm Password").foregroundColor(Color("CustomGreen"))) {
-                            TextField("Confirm Password", text: $viewModel.cpassword)
+                            SecureField("Confirm Password", text: $viewModel.cpassword)
                         }
                         
-                        Section(footer: signUpButton) {
-                            EmptyView()
+                        Section() {
+                            Button{
+                                viewModel.createAccount()
+                            } label: {
+                                HStack{
+                                    Spacer()
+                                    
+                                    ZStack {
+                                        Text("Sign Up")
+                                    }
+                                    .frame(maxWidth: .infinity)
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .padding(EdgeInsets(top: 15, leading: 70, bottom: 15, trailing: 70))
+                                    .background(Color("CustomGreen"))
+                                    .cornerRadius(15)
+                                    .shadow(radius: 5)
+                                    
+                                    Spacer()
+                                }
+
+                            }
+                            .padding(.top, 10)
+                            .listRowBackground(Color("CustomBrown"))
                         }
                         
                     }
@@ -57,23 +86,6 @@ struct CreateAccountView: View {
         }
         .background(Color("CustomBackground"))
     }
-}
-
-private var signUpButton: some View {
-        Button(action: signUpForm) {
-            Text("Sign Up")
-                .frame(maxWidth: .infinity)
-                .font(.headline)
-                .foregroundColor(.white)
-                .padding(EdgeInsets(top: 15, leading: 70, bottom: 15, trailing: 70))
-                .background(Color("CustomGreen"))
-                .cornerRadius(15)
-                .shadow(radius: 5)
-    }
-}
-
-private func signUpForm() {
-    // Add save logic here
 }
 
 struct CreateAccountView_Previews: PreviewProvider {

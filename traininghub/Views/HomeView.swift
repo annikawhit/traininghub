@@ -13,13 +13,6 @@ struct HomeView: View {
     
     var body: some View {
         
-        /*if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty{
-            
-            
-        } else{
-            LoginView()
-        }*/
-        
         TabView{
             TrainingArchiveView()
                 .tabItem{
