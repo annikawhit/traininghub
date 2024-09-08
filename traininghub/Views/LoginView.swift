@@ -9,8 +9,8 @@ import SwiftUI
 
 
 struct LoginView: View {
-    @State private var email: String = ""
-    @State private var password: String = ""
+    
+    @StateObject var viewModel = LoginViewModel()
     
     var body: some View {
         
@@ -29,42 +29,71 @@ struct LoginView: View {
                         .font(.system(size: 50))
                         .fontWeight(.bold)
                         .foregroundColor(Color("CustomBackground"))
-                        .padding(.bottom, 180)
+                        .padding(.top, 125)
+                        .padding(.bottom, 150)
                     
                     Text("Sign in")
                         .font(.title)
                         .fontWeight(.bold)
                         .padding(.bottom, 10)
                     
-                    HStack {
-                        Image(systemName: "person")
-                            .foregroundColor(.gray)
-                        TextField("Email", text: $email)
+                    if !viewModel.errorMessage.isEmpty {
+                        Text(viewModel.errorMessage)
+                            .foregroundColor(Color.red)
                     }
-                    .padding(.vertical, 10)
-                    .overlay(Rectangle().frame(height: 1)
-                        .padding(.top, 35), alignment: .bottom)
-                    .padding(.horizontal, 50)
                     
-                    HStack {
-                        Image(systemName: "lock")
-                            .foregroundColor(.gray)
-                        SecureField("Password", text: $password)
-                    }
-                    .padding(.vertical, 10)
-                    .overlay(Rectangle().frame(height: 1).padding(.top, 35), alignment: .bottom)
-                    .padding(.horizontal, 50)
-                    
-                    NavigationLink(destination: HomeView()){
-                        Text("Login")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding(EdgeInsets(top: 15, leading: 70, bottom: 15, trailing: 70))
-                            .background(Color("CustomBrown"))
-                            .cornerRadius(15)
-                            .shadow(radius: 5)
-                            .padding(.top, 35)
-                            .padding(.bottom, 10)
+                    VStack{
+                        Form{
+                            
+                            HStack {
+                                Image(systemName: "person")
+                                    .foregroundColor(.gray)
+                                TextField("Email", text: $viewModel.email)
+                            }
+                            .padding(.vertical, 10)
+                            .overlay(Rectangle().frame(height: 1)
+                                .padding(.top, 35), alignment: .bottom)
+                            .padding(.horizontal, 50)
+                            .listRowBackground(Color("CustomBackground"))
+                            
+                            
+                            HStack {
+                                Image(systemName: "lock")
+                                    .foregroundColor(.gray)
+                                SecureField("Password", text: $viewModel.password)
+                            }
+                            .padding(.vertical, 10)
+                            .overlay(Rectangle().frame(height: 1).padding(.top, 35), alignment: .bottom)
+                            .padding(.horizontal, 50)
+                            .listRowBackground(Color("CustomBackground"))
+                            .cornerRadius(10)
+                            
+                            Button{
+                                viewModel.login()
+                            } label: {
+                                HStack{
+                                    Spacer()
+                                    
+                                    ZStack {
+                                        Text("Log In")
+                                    }
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .padding(EdgeInsets(top: 15, leading: 70, bottom: 15, trailing: 70))
+                                    .background(Color("CustomBrown"))
+                                    .cornerRadius(15)
+                                    .shadow(radius: 5)
+                                    
+                                    Spacer()
+                                }
+
+                            }
+                            .padding(.top, 10)
+                            .listRowBackground(Color("CustomBackground"))
+                        }
+                        .background(Color("CustomBackground"))
+                        .scrollContentBackground(.hidden)
+                        
                     }
                     
                     HStack{
@@ -77,7 +106,7 @@ struct LoginView: View {
                         }
                     }
                     .multilineTextAlignment(.center)
-                    .padding(.bottom, 100)
+                    .padding(.bottom, 120)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .edgesIgnoringSafeArea(.all)
