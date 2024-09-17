@@ -19,7 +19,7 @@ struct traininghubApp: App {
   var body: some Scene {
     WindowGroup {
       NavigationView {
-          LoginView()
+          ContentView()
       }
     }
   }
