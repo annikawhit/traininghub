@@ -25,6 +25,8 @@ class CreateAccountViewModel: ObservableObject {
             return
         }
         
+        print("here2")
+        
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
             guard let userId = result?.user.uid else{
                 return
@@ -47,6 +49,8 @@ class CreateAccountViewModel: ObservableObject {
         db.collection("users")
             .document(id)
             .setData(newUser.asDictionary())
+        
+        print("done")
     }
     
     private func validate() -> Bool{
@@ -77,7 +81,7 @@ class CreateAccountViewModel: ObservableObject {
             errorMessage = "Password should contain at least 8 characters."
             return false
         }
-
+        print("here1")
         return true
         
     }
