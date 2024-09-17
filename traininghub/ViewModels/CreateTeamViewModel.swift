@@ -39,7 +39,7 @@ class CreateTeamViewModel: ObservableObject {
                 team_training_locations: [],
                 team_training_types: [])
 
-                // Save the data with the unique ID
+            // Save the team data with the unique ID
             db.collection("teams").document(newTeamId).setData(newTeam.asDictionary()) { error in
                 if let error = error {
                         print("Error writing team model to database: \(error)")
@@ -47,6 +47,17 @@ class CreateTeamViewModel: ObservableObject {
                         print("Team model was successfully written with ID \(newTeamId)")
                 }
             }
+            
+            //add teamid to the current user's data
+            db.collection("users").document(userId).updateData([
+                    "user_teams": FieldValue.arrayUnion([newTeamId])
+                ]) { err in
+                    if let err = err {
+                        print("Error adding new team id to the list of teams: \(err)")
+                    } else {
+                        print("The new team id was successfully added to the user's list of teams.")
+                    }
+                }
         }
     }
     
