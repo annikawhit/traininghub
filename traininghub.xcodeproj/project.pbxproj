@@ -21,6 +21,7 @@
 		3108C5762C705C060066B1EB /* RecordTrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108C5752C705C060066B1EB /* RecordTrainingViewModel.swift */; };
 		3108C5782C705C3E0066B1EB /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108C5772C705C3E0066B1EB /* ProfileViewModel.swift */; };
 		3108C57A2C727B010066B1EB /* ChangeUserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108C5792C727B010066B1EB /* ChangeUserDataViewModel.swift */; };
+		311DED932C99D6F200644F92 /* TrainingArchiveItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311DED922C99D6F200644F92 /* TrainingArchiveItemViewModel.swift */; };
 		313199F62C758C3500C43ED2 /* CreateTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313199F52C758C3500C43ED2 /* CreateTeamViewModel.swift */; };
 		313199F82C758D7600C43ED2 /* WelcomeTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313199F72C758D7600C43ED2 /* WelcomeTeamViewModel.swift */; };
 		313199FA2C758FF800C43ED2 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313199F92C758FF800C43ED2 /* SettingsViewModel.swift */; };
@@ -82,6 +83,7 @@
 		3108C5752C705C060066B1EB /* RecordTrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTrainingViewModel.swift; sourceTree = "<group>"; };
 		3108C5772C705C3E0066B1EB /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		3108C5792C727B010066B1EB /* ChangeUserDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataViewModel.swift; sourceTree = "<group>"; };
+		311DED922C99D6F200644F92 /* TrainingArchiveItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingArchiveItemViewModel.swift; sourceTree = "<group>"; };
 		313199F52C758C3500C43ED2 /* CreateTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamViewModel.swift; sourceTree = "<group>"; };
 		313199F72C758D7600C43ED2 /* WelcomeTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTeamViewModel.swift; sourceTree = "<group>"; };
 		313199F92C758FF800C43ED2 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				313199F92C758FF800C43ED2 /* SettingsViewModel.swift */,
 				313199FF2C78392600C43ED2 /* JoinTeamViewModel.swift */,
 				31CD9B602C8D445F0040C3DD /* ContentViewModel.swift */,
+				311DED922C99D6F200644F92 /* TrainingArchiveItemViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				314A3E782C2D09C20066BEFC /* SettingsView.swift in Sources */,
 				3108C56E2C7053DB0066B1EB /* CreateAccountViewModel.swift in Sources */,
 				3108C5742C705BCF0066B1EB /* TrainingArchiveViewModel.swift in Sources */,
+				311DED932C99D6F200644F92 /* TrainingArchiveItemViewModel.swift in Sources */,
 				3108C56A2C70536C0066B1EB /* TrainingSession.swift in Sources */,
 				314A3E6E2C2734AA0066BEFC /* CreateAccountView.swift in Sources */,
 				313199FE2C78391300C43ED2 /* JoinTeamView.swift in Sources */,

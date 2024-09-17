@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
-            HomeView()
+            HomeView(userId: viewModel.currentUserId)
         } else{
             LoginView()
         }

@@ -11,6 +11,9 @@ struct CreateTeamView: View {
     
     @StateObject var viewModel = CreateTeamViewModel()
     
+    //doesn't contain the userid yet
+    private var userId = ""
+    
     var body: some View {
         ZStack {
                 GeometryReader { geometry in
@@ -36,7 +39,7 @@ struct CreateTeamView: View {
                         .padding(.top, 35), alignment: .bottom)
                         .padding(.horizontal, 60)
                     
-                    NavigationLink(destination: HomeView()){
+                    NavigationLink(destination: HomeView(userId: userId)){
                         Text("Create Team")
                             .font(.headline)
                             .foregroundColor(.white)

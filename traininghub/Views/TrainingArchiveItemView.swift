@@ -17,6 +17,15 @@ struct TrainingArchiveItemView: View {
         return formatter.string(from: item.training_date)
     }
     
+    var teamName: String{
+        //let name = getTeamName(item.training_team_id)
+        
+        //temp
+        let name = "test teamname"
+        
+        return name
+    }
+    
     var body: some View {
         NavigationLink(destination: RecordTrainingView()){
             HStack {
@@ -30,6 +39,8 @@ struct TrainingArchiveItemView: View {
                 
                 Spacer()
                 
+                Text(teamName)
+                    .font(.body)
                 
             }
         }
@@ -45,6 +56,8 @@ struct TrainingArchiveItemView_Previews: PreviewProvider {
             training_participants: ["1234", "5678"],
             training_type: "type",
             training_date: Date(),
+            training_start_time: Date(),
+            training_end_time: Date(),
             training_location: "location"
         ))
     }

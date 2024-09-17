@@ -25,6 +25,7 @@ struct RecordTrainingView: View {
                     
                     Section(header: Text("Select Team").foregroundColor(Color("CustomGreen"))) {
                         Picker("Team", selection: $viewModel.team) {
+                            Text("Select Team").tag(nil as String?)
                             ForEach(viewModel.teams, id: \.self) { team in
                                 Text(team)
                             }
@@ -37,6 +38,7 @@ struct RecordTrainingView: View {
                     
                     Section(header: Text("Select Training Type").foregroundColor(Color("CustomGreen"))) {
                         Picker("Type", selection: $viewModel.type) {
+                            Text("Select Type").tag(nil as String?)
                             ForEach(viewModel.types, id: \.self) { type in
                                 Text(type)
                             }
@@ -60,6 +62,7 @@ struct RecordTrainingView: View {
                     
                     Section(header: Text("Select Training Location").foregroundColor(Color("CustomGreen"))) {
                         Picker("Location", selection: $viewModel.location) {
+                            Text("Select Location").tag(nil as String?)
                             ForEach(viewModel.locations, id: \.self) { location in
                                 Text(location)
                             }
@@ -81,8 +84,37 @@ struct RecordTrainingView: View {
                         }
                     }
                     
-                    Section(footer: saveButton) {
-                        EmptyView()
+                    Section() {
+                        Button{
+                            viewModel.save()
+                        } label: {
+                            VStack{
+                                if !viewModel.errorMessage.isEmpty {
+                                    Text(viewModel.errorMessage)
+                                        .foregroundColor(Color.red)
+                                }
+                                
+                                HStack{
+                                    Spacer()
+                                    
+                                    ZStack {
+                                        Text("Save")
+                                            .frame(maxWidth: .infinity)
+                                            .font(.headline)
+                                            .foregroundColor(.white)
+                                            .padding(EdgeInsets(top: 15, leading: 70, bottom: 15, trailing: 70))
+                                            .background(Color("CustomGreen"))
+                                            .cornerRadius(15)
+                                            .shadow(radius: 5)
+                                            .padding(.bottom, 15)
+                                    }
+                                    
+                                    Spacer()
+                                }
+                            }
+
+                        }
+                        .listRowBackground(Color("CustomBrown"))
                     }
                     
                 }
@@ -91,24 +123,6 @@ struct RecordTrainingView: View {
         }
         .background(Color("CustomBrown"))
     }
-}
-
-private var saveButton: some View {
-        Button(action: saveForm) {
-            Text("Save")
-                .frame(maxWidth: .infinity)
-                .font(.headline)
-                .foregroundColor(.white)
-                .padding(EdgeInsets(top: 15, leading: 70, bottom: 15, trailing: 70))
-                .background(Color("CustomGreen"))
-                .cornerRadius(15)
-                .shadow(radius: 5)
-                .padding(.bottom, 15)
-    }
-}
-
-private func saveForm() {
-    // Add save logic here
 }
 
 private func addParticipant() {

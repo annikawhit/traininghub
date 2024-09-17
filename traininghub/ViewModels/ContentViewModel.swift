@@ -21,6 +21,7 @@ class ContentViewModel: ObservableObject {
     }
     
     public var isSignedIn: Bool{
+        print(Auth.auth().currentUser as Any)
         return Auth.auth().currentUser != nil
     }
 }

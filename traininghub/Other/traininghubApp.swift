@@ -10,7 +10,8 @@ import FirebaseCore
 
 
 @main
-struct traininghubApp: App {
+
+    struct traininghubApp: App {
   
     init(){
         FirebaseApp.configure()

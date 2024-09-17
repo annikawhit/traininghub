@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import FirebaseAuth
+import FirebaseFirestore
 
 class RecordTrainingViewModel: ObservableObject {
     @Published var teams = ["team1", "team2", "team3", "team4"]
@@ -21,7 +23,9 @@ class RecordTrainingViewModel: ObservableObject {
     @Published var endTime = Date()
     @Published var location = ""
     @Published var new_location = ""
-    @Published var selectedParticipants = ""
+    @Published var selectedParticipants: [String] = []
+    
+    @Published var errorMessage = ""
     
     init() {}
     
@@ -30,17 +34,49 @@ class RecordTrainingViewModel: ObservableObject {
             return
         }
         
+        //get current userid
+        guard let userId = Auth.auth().currentUser?.uid else{
+            return
+        }
+        
         //create model
+        let newTrainingId = UUID().uuidString
+        let newTrainingRecord = TrainingSession(
+            id: newTrainingId,
+            training_name: name,
+            training_team_id: team,
+            //training_participants: selectedParticipants, *** while participants functionality isn't set up***
+            training_participants: ["user1", "user2"],
+            training_type: type,
+            training_date: date,
+            training_start_time: startTime,
+            training_end_time: endTime,
+            training_location: location)
+        
+        print("model was created")
         
         //save model
+        let db = Firestore.firestore()
+        
+        db.collection("trainingsessions")
+            .document(newTrainingId)
+            .setData(newTrainingRecord.asDictionary())
+        print("model has been saved to the db")
     }
     
     var canSave: Bool{
-        //add guards to check data
-        /* ex:
-         guard !title.trimmingCharacters(in: .whitespaces).isEmpty else{
+        
+        guard !team.trimmingCharacters(in: .whitespaces).isEmpty,
+              !name.trimmingCharacters(in: .whitespaces).isEmpty,
+              !type.trimmingCharacters(in: .whitespaces).isEmpty,
+              !location.trimmingCharacters(in: .whitespaces).isEmpty
+              /*!selectedParticipants.isEmpty ***while participants functionality isn't set up*** */ else{
+            
+            errorMessage = "Please fill in all fields."
+            
             return false
-         }*/
+        }
+        
         return true
     }
 }

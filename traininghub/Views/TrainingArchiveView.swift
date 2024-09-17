@@ -10,11 +10,11 @@ import SwiftUI
 struct TrainingArchiveView: View {
     @StateObject var viewModel = TrainingArchiveViewModel()
     
-    /*private let userId: String
+    private let userId: String
     
     init(userId: String){
         self.userId = userId
-    }*/
+    }
     
     let allItems = Array(1...50).map { "Item \($0)" } // Example data: 50 items
     @State private var currentIndex = 0
@@ -122,6 +122,6 @@ struct TrainingArchiveView: View {
 
 struct TrainingArchiveView_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingArchiveView()
+        TrainingArchiveView(userId: "")
     }
 }

@@ -10,6 +10,9 @@ import SwiftUI
 struct JoinTeamView: View {
     @StateObject var viewModel = JoinTeamViewModel()
     
+    //doesn't contain the userid yet
+    private var userId = ""
+    
     var body: some View {
         ZStack {
                 GeometryReader { geometry in
@@ -35,7 +38,7 @@ struct JoinTeamView: View {
                         .padding(.top, 35), alignment: .bottom)
                         .padding(.horizontal, 60)
                     
-                    NavigationLink(destination: HomeView()){
+                    NavigationLink(destination: HomeView(userId: userId)){
                         Text("Join Team")
                             .font(.headline)
                             .foregroundColor(.white)
