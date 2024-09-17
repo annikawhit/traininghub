@@ -10,6 +10,10 @@ import SwiftUI
 struct RecordTrainingView: View {
     @StateObject var viewModel = RecordTrainingViewModel()
     
+    init(){
+        viewModel.getUserData()
+    }
+    
     var body: some View {
         
         VStack{

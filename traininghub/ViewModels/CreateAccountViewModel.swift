@@ -25,8 +25,6 @@ class CreateAccountViewModel: ObservableObject {
             return
         }
         
-        print("here2")
-        
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
             guard let userId = result?.user.uid else{
                 return

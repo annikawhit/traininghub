@@ -26,29 +26,48 @@ struct CreateTeamView: View {
                 .edgesIgnoringSafeArea(.all)
                 
                 VStack {
+                    Spacer()
+                    
                     Text("Create a Team")
                         .font(.system(size: 50))
                         .fontWeight(.bold)
                         .foregroundColor(Color("CustomBackground"))
                         .padding(.top, 50)
-                        .padding(.bottom, 180)
+                        .padding(.bottom, 70)
+                    
+                    Spacer()
                     
                     TextField("Team Name", text: $viewModel.teamName)
                         .padding(.vertical, 10)
                         .overlay(Rectangle().frame(height: 1)
                         .padding(.top, 35), alignment: .bottom)
                         .padding(.horizontal, 60)
+                        .padding(.bottom, 15)
                     
-                    NavigationLink(destination: HomeView(userId: userId)){
-                        Text("Create Team")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding(EdgeInsets(top: 15, leading: 70, bottom: 15, trailing: 70))
-                            .background(Color("CustomBrown"))
-                            .cornerRadius(15)
-                            .shadow(radius: 5)
-                            .padding(.top, 15)
-                            .padding(.bottom, 10)
+                    if !viewModel.errorMessage.isEmpty {
+                        Text(viewModel.errorMessage)
+                            .foregroundColor(Color.red)
+                    }
+                    
+                    Button{
+                        viewModel.createTeam()
+                    } label: {
+                        HStack{
+                            Spacer()
+                            
+                            ZStack {
+                                Text("Create Team")
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .padding(EdgeInsets(top: 15, leading: 70, bottom: 15, trailing: 70))
+                                    .background(Color("CustomBrown"))
+                                    .cornerRadius(15)
+                                    .shadow(radius: 5)
+                                    .padding(.bottom, 10)
+                            }
+                            
+                            Spacer()
+                        }
                     }
                     
                     HStack{
@@ -62,6 +81,8 @@ struct CreateTeamView: View {
                     }
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 100)
+                    
+                    Spacer()
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .edgesIgnoringSafeArea(.all)

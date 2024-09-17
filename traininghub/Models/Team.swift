@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Team{
+struct Team: Codable, Identifiable{
     let id: String
     let team_name: String
     let team_members: [String]

@@ -29,16 +29,23 @@ class RecordTrainingViewModel: ObservableObject {
     
     init() {}
     
-    func save(){
-        guard canSave else{
-            return
-        }
-        
+    func getUserData(){
         //get current userid
         guard let userId = Auth.auth().currentUser?.uid else{
             return
         }
         
+        //save model
+        let db = Firestore.firestore()
+        
+        //add code to get the user data from firebase
+    }
+    
+    func save(){
+        guard canSave else{
+            return
+        }
+
         //create model
         let newTrainingId = UUID().uuidString
         let newTrainingRecord = TrainingSession(
