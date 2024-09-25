@@ -28,7 +28,7 @@ struct SettingsView: View {
                     
                     
                     NavigationLink(destination: ChangeUserDataView()){
-                        Text("Change Email and Password")
+                        Text("Change Account Information")
                             .font(.headline)
                             .foregroundColor(.white)
                             .padding(EdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 15))

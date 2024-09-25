@@ -48,7 +48,7 @@ class CreateAccountViewModel: ObservableObject {
             .document(id)
             .setData(newUser.asDictionary())
         
-        print("done")
+        print("User was added to the database.")
     }
     
     private func validate() -> Bool{
@@ -79,7 +79,7 @@ class CreateAccountViewModel: ObservableObject {
             errorMessage = "Password should contain at least 8 characters."
             return false
         }
-        print("here1")
+        
         return true
         
     }
