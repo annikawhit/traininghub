@@ -25,29 +25,48 @@ struct JoinTeamView: View {
                 .edgesIgnoringSafeArea(.all)
                 
                 VStack {
+                    Spacer()
+                    
                     Text("Join a Team!")
                         .font(.system(size: 50))
                         .fontWeight(.bold)
                         .foregroundColor(Color("CustomBackground"))
                         .padding(.top, 50)
-                        .padding(.bottom, 180)
+                        .padding(.bottom, 90)
+                    
+                    Spacer()
                     
                     TextField("Team ID", text: $viewModel.teamID)
                         .padding(.vertical, 10)
                         .overlay(Rectangle().frame(height: 1)
                         .padding(.top, 35), alignment: .bottom)
                         .padding(.horizontal, 60)
+                        .padding(.bottom, 15)
                     
-                    NavigationLink(destination: HomeView(userId: userId)){
-                        Text("Join Team")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding(EdgeInsets(top: 15, leading: 70, bottom: 15, trailing: 70))
-                            .background(Color("CustomBrown"))
-                            .cornerRadius(15)
-                            .shadow(radius: 5)
-                            .padding(.top, 15)
-                            .padding(.bottom, 10)
+                    if !viewModel.errorMessage.isEmpty {
+                        Text(viewModel.errorMessage)
+                            .foregroundColor(Color.red)
+                    }
+                    
+                    Button{
+                        viewModel.joinTeam()
+                    } label: {
+                        HStack{
+                            Spacer()
+                            
+                            ZStack {
+                                Text("Join Team")
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .padding(EdgeInsets(top: 15, leading: 70, bottom: 15, trailing: 70))
+                                    .background(Color("CustomBrown"))
+                                    .cornerRadius(15)
+                                    .shadow(radius: 5)
+                                    .padding(.bottom, 10)
+                            }
+                            
+                            Spacer()
+                        }
                     }
                     
                     HStack{
@@ -61,6 +80,8 @@ struct JoinTeamView: View {
                     }
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 100)
+                    
+                    Spacer()
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .edgesIgnoringSafeArea(.all)

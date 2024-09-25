@@ -19,7 +19,7 @@ struct ProfileView: View {
                     
                 HStack{
                     Button {
-                        viewModel.showingCreateTeamViewModel = true
+                        viewModel.showingJoinTeamViewModel = true
                     } label: {
                         Image(systemName: "plus")
                     }
