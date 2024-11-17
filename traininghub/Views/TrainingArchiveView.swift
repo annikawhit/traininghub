@@ -6,14 +6,19 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct TrainingArchiveView: View {
     @StateObject var viewModel = TrainingArchiveViewModel()
+    //@FirestoreQuery var trainingSessions: [TrainingSession]
+    @FirestoreQuery var userTeams: [Team]
     
     private let userId: String
     
     init(userId: String){
         self.userId = userId
+        self._userTeams = FirestoreQuery(collectionPath: "users/\(userId)/user_teams")
+        //self._trainingSessions =
     }
     
     let allItems = Array(1...50).map { "Item \($0)" } // Example data: 50 items
@@ -65,6 +70,7 @@ struct TrainingArchiveView: View {
                 
                 ZStack{
                     VStack {
+                        
                         List(allItems, id: \.self) { item in
                             NavigationLink(destination: RecordTrainingView()){
                                 Text(item)

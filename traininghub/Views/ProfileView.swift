@@ -6,20 +6,25 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct ProfileView: View {
     @StateObject var viewModel = ProfileViewModel()
     
+    init() {
+    }
+    
+    
     var body: some View {
         VStack{
-                Text(viewModel.name)
+            Text(viewModel.name)
                     .padding(.top, 20)
                     .font(.system(size: 30))
                     .bold()
                     
                 HStack{
                     Button {
-                        viewModel.showingJoinTeamViewModel = true
+                        viewModel.showingCreateTeamViewModel = true
                     } label: {
                         Image(systemName: "plus")
                     }
@@ -41,9 +46,9 @@ struct ProfileView: View {
                 
                 ZStack{
                     VStack {
-                        List(viewModel.teams, id: \.self) { team in
+                        List(viewModel.teams) { team in
                                 NavigationLink(destination: TeamDataView()){
-                                    Text(team)
+                                    Text(team.team_name)
                                 }
                         }
                         .scrollContentBackground(.hidden)

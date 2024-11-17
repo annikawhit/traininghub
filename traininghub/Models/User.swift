@@ -13,5 +13,5 @@ struct User: Codable{
     let user_last_name: String
     let user_email: String
     let user_password: String
-    let user_teams: [String]
+    let user_teams: [[String]]
 }
